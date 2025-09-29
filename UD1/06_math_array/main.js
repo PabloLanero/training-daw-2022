@@ -4,6 +4,9 @@
 // El elemento más pequeño
 // La media de los elementos
 
+const { exists } = require("fs");
+const { isFloat32Array } = require("util/types");
+
 
 
 function doCalculation(array) {
@@ -22,6 +25,9 @@ function doCalculation(array) {
     console.log(`El numero mas pequeño es el ${numeroPequeno}`)
     console.log(`La suma de los numeros es el ${sumaTotal}`)
     console.log(`La media de los numeros es ${sumaTotal/array.length}`)
+
+    let posicionMediana=array.length/2;
+    
     
 
 }
