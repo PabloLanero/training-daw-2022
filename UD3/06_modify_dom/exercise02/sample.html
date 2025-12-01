@@ -5,12 +5,37 @@
 <script type="text/javascript">
 window.onload = function() {
 	// Numero de enlaces de la pagina
-
+	let enlaces = document.getElementsByTagName('a')
+	console.log(enlaces.length)
 	// Direccion del penultimo enlace
-
+	console.log(enlaces[enlaces.length-2].attributes.href.value) 
 	// Numero de enlaces que apuntan a http://prueba
-
+	let contador =0
+	for (let enlace of enlaces){
+		if (enlace.attributes.href.value.includes("http://prueba/"))contador++
+	}
+	console.log(contador)	
 	// Numero de enlaces del tercer párrafo
+	let parrafos = document.getElementsByTagName('p')
+	let parrafo = parrafos[2]
+	let enlacesParrafo = parrafo.getElementsByTagName('a')
+	console.log(enlacesParrafo.length)
+
+	//Crear un nodo <div>, con un nodo <p> dentro y añadirlo al documento
+	const pNode = document.createElement('p')
+	const divNote = document.createElement('div')
+	const aNode = document.createElement('a')
+
+	pNode.innerHTML= "Ejemplo"
+
+	aNode.innerText = "Enlace de ejemplo"
+	aNode.href = "https://google.com/"
+
+	divNote.appendChild(pNode)
+	divNote.appendChild(aNode)
+	document.querySelector('body').appendChild(divNote)
+
+
 
 }
 </script>

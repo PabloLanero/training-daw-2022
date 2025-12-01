@@ -30,8 +30,12 @@ var pilots = [
 ];
 
 function iterateSimple() {
+
 }
 function iterateForEach() {
+array.forEach(element => {
+  
+});
 }
 function mapIds() {
 }
